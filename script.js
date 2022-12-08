@@ -1,4 +1,5 @@
 const key = "599bfde9dad9e03d506db251b686645c";
+var weather = document.querySelector('.weather');
 
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition);
@@ -28,7 +29,7 @@ function getWeather(latitude, longitude) {
     let data= response.json();
     return data;
     });
-    // .then(function(data) {
-    // getWeather.temperature.value = Math.floor(data.main.temp - Kelvin)
-// });
+    .then(function(data) {
+    getWeather.weater.value = Math.floor(data.main.temp);
+});
 }
