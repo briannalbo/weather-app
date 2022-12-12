@@ -5,7 +5,13 @@ header {
 }
 
 #weather1 {
-    width: 300px;
+    flex-direction: column;
+    float: right;
+    width: 600px;
     height: 300px;
-    border: 2px solid black;
+    border: 1px solid gray;
+}
+
+.card {
+    /* width: 200px; */
 }
