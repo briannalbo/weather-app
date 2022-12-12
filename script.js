@@ -1,6 +1,12 @@
 const key = "599bfde9dad9e03d506db251b686645c";
 var weather = document.querySelector('.weather');
 // $("#city1) = document.querySelector('#city1');
+$("#currentDate").text(dayjs().format('MM/DD/YY'));
+$("#tomorrow").text(dayjs().add(1,'day').format('MM/DD/YY'));
+$("#twodays").text(dayjs().add(2,'day').format('MM/DD/YY'));
+$("#threedays").text(dayjs().add(3,'day').format('MM/DD/YY'));
+$("#fourdays").text(dayjs().add(4,'day').format('MM/DD/YY'));
+$("#fivedays").text(dayjs().add(5,'day').format('MM/DD/YY'));
 
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition);

@@ -22,6 +22,7 @@
 <div class="weather1 card mb-3">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
+        <h2 class="card-date" id="currentDate"></h2>
       <h5 class="card-title" id="city"> </h5>
       <p class="card-text" id="temp"> </p>
       <p class="card-text" id="description"><small class="text-muted"> </small></p>
@@ -33,21 +34,21 @@
     <div class="card">
 
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-date" id="tomorrow">Card title</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-date" id="twodays">Card title</h5>
         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-date" id="threedays">Card title</h5>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
@@ -56,7 +57,7 @@
         <div class="card">
           
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-date" id="fourdays">Card title</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
@@ -64,14 +65,14 @@
         <div class="card">
           
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-date" id="fivedays">Card title</h5>
             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
     
-          
-         
+     <!--links dayjs-->     
+ <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="crossorigin="anonymous"></script>
       
 <!--links jquery library-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
