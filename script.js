@@ -147,3 +147,29 @@ var austinLong = -97.733330;
 $("#austin").on("click", function() {
     getWeather(austinLat, austinLong)
 });
+
+var searchedCity = document.querySelector("#searchedCity");
+var userchosencity = searchedCity;
+
+// var apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${usechosencity}&limit=5&appid=${key}`;
+$("#searchBtn").on("click", function() {
+    
+    let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${chicago}&limit=5&appid=${key}`;
+    // console.log(apiLoc);
+    
+    fetch(apiLoc)
+    .then(function (response) {
+    if (response.status !== 200) {
+        console.log(response.status);
+    }
+    return response.json();
+    // console.log(response.json);
+})
+
+    .then(function (data) {
+    // var city90= data[0].lon;
+    // console.log(city90);
+    var searchedLat = data[0].lat;
+    console.log(searchedLat);
+    })
+});
