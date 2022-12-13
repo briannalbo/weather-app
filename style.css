@@ -1,7 +1,13 @@
+body{
+    box-sizing: 100vh;
+}
+
 header {
     background-color: blue;
     font-size: 50px;
     font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 10px;
+    border-bottom: 10px;
 }
 
 #weather1 {
@@ -11,9 +17,31 @@ header {
     height: 300px;
     border: 1px solid gray;
 }
+#citySearch {
+    width: 320px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+#searchBtn {
+    width: 300px;
+}
 
-container {
+#cityBtns {
+    width: 300px;
+    padding-left: 20px;
+}
+
+#search-tools{
+    float: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#weather-main {
+    padding-top: 20px;
     float: right;
     width: 1000px;
-    padding-right: 50px;
+    padding-right: 70px;
+    flex-direction:column;
 }
