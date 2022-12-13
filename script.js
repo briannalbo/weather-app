@@ -165,7 +165,7 @@ $("#searchBtn").on("click", function() {
     // var searchedCity = document.querySelector('#searchedCity');
     // $("#searchedCity").text("ch");
     var city = $(this).siblings("input").val();
-  
+    // localStorage.setItem.apply(this).siblings("datalist"), JSON.stringify(city.val());
 
     console.log(city);
     let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${key}`;
