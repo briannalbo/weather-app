@@ -154,7 +154,7 @@ var userchosencity = searchedCity;
 // var apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${usechosencity}&limit=5&appid=${key}`;
 $("#searchBtn").on("click", function() {
     
-    let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${chicago}&limit=5&appid=${key}`;
+    let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=chicago&limit=5&appid=${key}`;
     // console.log(apiLoc);
     
     fetch(apiLoc)
@@ -163,12 +163,14 @@ $("#searchBtn").on("click", function() {
         console.log(response.status);
     }
     return response.json();
-    // console.log(response.json);
+    // console.log(response.json());
 })
 
     .then(function (data) {
-    // var city90= data[0].lon;
-    // console.log(city90);
+    var city90= data[0].lon;
+    var city30= data[0].name;
+    console.log(city30);
+    console.log(city90);
     var searchedLat = data[0].lat;
     console.log(searchedLat);
     })
