@@ -69,6 +69,11 @@ function getWeather(currentLat, currentLong) {
     var wind4 = data.list[23].wind.speed;
     var wind5 = data.list[31].wind.speed;
     var wind6 = data.list[39].wind.speed;
+    var descript2 = data.list[7].weather[0].description;
+    var descript3 = data.list[15].weather[0].description;
+    var descript4 = data.list[23].weather[0].description;
+    var descript5 = data.list[31].weather[0].description;
+    var descript6 = data.list[39].weather[0].description;
     
 $("#city").text(city);
 $("#temp").text(temp + " degrees");
@@ -94,7 +99,11 @@ $("#wind4").text("wind-speed " + wind4);
 $("#wind5").text("wind-speed " + wind5);
 $("#wind6").text("wind-speed " + wind6);
 
-
+$("#descript2").text(descript2);
+$("#descript3").text(descript3);
+$("#descript4").text(descript4);
+$("#descript5").text(descript5);
+$("#descript6").text(descript6);
 
 
 })};
@@ -148,13 +157,18 @@ $("#austin").on("click", function() {
     getWeather(austinLat, austinLong)
 });
 
-var searchedCity = document.querySelector("#searchedCity");
-var userchosencity = searchedCity;
+// var searchedCity = document.querySelector('#searchedCity');
+// var userchosencity = searchedCity;
 
 // var apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${usechosencity}&limit=5&appid=${key}`;
 $("#searchBtn").on("click", function() {
-    
-    let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=chicago&limit=5&appid=${key}`;
+    // var searchedCity = document.querySelector('#searchedCity');
+    // $("#searchedCity").text("ch");
+    var city = $(this).siblings("input").val();
+  
+
+    console.log(city);
+    let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${key}`;
     // console.log(apiLoc);
     
     fetch(apiLoc)
@@ -173,5 +187,9 @@ $("#searchBtn").on("click", function() {
     console.log(city90);
     var searchedLat = data[0].lat;
     console.log(searchedLat);
+    
+    getWeather(searchedLat, city90);
     })
+
+    // getWeather(searchedLat, city90);
 });
