@@ -37,10 +37,12 @@ function getWeather(currentLat, currentLong) {
         console.log(response.status);
     }
     return response.json();
+    console.log(response.json);
 })
 
     .then(function (data) {
     var city = data.city.name;
+
     console.log(city);
     var temp = Math.floor(data.list[0].main.temp);
     console.log(temp);
@@ -48,10 +50,52 @@ function getWeather(currentLat, currentLong) {
     console.log(description);
     var icon = data.list[0].weather[0].icon;
     console.log(icon);
+    var humidity = data.list[0].main.humidity;
+    console.log(humidity);
+    var windSpeed = data.list[0].wind.speed;
+    console.log(windSpeed);
+    var temp2 = Math.floor(data.list[7].main.temp);
+    var temp3 = Math.floor(data.list[15].main.temp);
+    var temp4 = Math.floor(data.list[23].main.temp);
+    var temp5 = Math.floor(data.list[31].main.temp);
+    var temp6 = Math.floor(data.list[39].main.temp);
+    var humid2 = data.list[7].main.humidity;
+    var humid3 = data.list[15].main.humidity;
+    var humid4 = data.list[23].main.humidity;
+    var humid5= data.list[31].main.humidity;
+    var humid6 = data.list[39].main.humidity;
+    var wind2 = data.list[7].wind.speed;
+    var wind3 = data.list[15].wind.speed;
+    var wind4 = data.list[23].wind.speed;
+    var wind5 = data.list[31].wind.speed;
+    var wind6 = data.list[39].wind.speed;
     
 $("#city").text(city);
-$("#temp").text(temp);
+$("#temp").text(temp + " degrees");
 $("#description").text(description);
+$("#humidity").text("humidity: " + humidity);
+$("#wind").text("wind-speed " + windSpeed);
+
+$("#temp2").text(temp2 + " degrees");
+$("#temp3").text(temp3 + " degrees");
+$("#temp4").text(temp4 + " degrees");
+$("#temp5").text(temp5 + " degrees");
+$("#temp6").text(temp6 + " degrees");
+
+$("#humid2").text("humidity: " + humid2);
+$("#humid3").text("humidity: " + humid3);
+$("#humid4").text("humidity: " + humid4);
+$("#humid5").text("humidity: " + humid5);
+$("#humid6").text("humidity: " + humid6);
+
+$("#wind2").text("wind-speed " + wind2);
+$("#wind3").text("wind-speed " + wind3);
+$("#wind4").text("wind-speed " + wind4);
+$("#wind5").text("wind-speed " + wind5);
+$("#wind6").text("wind-speed " + wind6);
+
+
+
 
 })};
 
