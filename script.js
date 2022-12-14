@@ -165,6 +165,36 @@ $("#searchBtn").on("click", function() {
     // var searchedCity = document.querySelector('#searchedCity');
     // $("#searchedCity").text("ch");
     var city = $(this).siblings("input").val();
+    
+    var savedCity = city;
+
+    if (savedCity === null) {
+        console.log("No city searched");
+    }
+
+    else {
+    var cityArray = {
+        savedCity: savedCity,
+    }
+    }
+    console.log(cityArray);
+    var allCities = localStorage.getItem("allCities");
+    if (allCities === null) {
+        allCities = [];
+    }
+    else {
+        allCities =JSON.parse(allCities);
+    }
+    allCities.push(cityArray);
+    var newcity = JSON.stringify(allCities);
+    localStorage.setItem("allCities", newcity);
+    
+    console.log(newcity);
+    console.log(cityArray);
+
+    // localStorage.setItem(city.value, JSON.stringify(cityArray));
+
+    // console.log(cityArray);
     // localStorage.setItem.apply(this).siblings("datalist"), JSON.stringify(city.val());
 
     console.log(city);
