@@ -1,5 +1,6 @@
 const key = "599bfde9dad9e03d506db251b686645c";
 var weather = document.querySelector('.weather');
+var dataList = document.querySelector('datalist');
 
 $("#currentDate").text(dayjs().format('MM/DD/YY'));
 $("#tomorrow").text(dayjs().add(1,'day').format('MM/DD/YY'));
@@ -166,6 +167,31 @@ $("#searchBtn").on("click", function() {
     // $("#searchedCity").text("ch");
     var city = $(this).siblings("input").val();
     
+ 
+    console.log(city);
+    let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${key}`;
+    // console.log(apiLoc);
+    
+    fetch(apiLoc)
+    .then(function (response) {
+    if (response.status !== 200) {
+        console.log(response.status);
+    }
+    return response.json();
+    // console.log(response.json());
+})
+
+    .then(function (data) {
+    var city90= data[0].lon;
+    var city30= data[0].name;
+    console.log(city30);
+    console.log(city90);
+    var searchedLat = data[0].lat;
+    console.log(searchedLat);
+    
+    getWeather(searchedLat, city90);
+    })
+
     var savedCity = city;
 
     if (savedCity === null) {
@@ -192,34 +218,15 @@ $("#searchBtn").on("click", function() {
     console.log(newcity);
     console.log(cityArray);
 
-    // localStorage.setItem(city.value, JSON.stringify(cityArray));
+    if (allCities !== null) {
 
-    // console.log(cityArray);
-    // localStorage.setItem.apply(this).siblings("datalist"), JSON.stringify(city.val());
-
-    console.log(city);
-    let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${key}`;
-    // console.log(apiLoc);
+        for (var i = 0; i < allCities.length; i++) {
     
-    fetch(apiLoc)
-    .then(function (response) {
-    if (response.status !== 200) {
-        console.log(response.status);
+            var createList = document.createElement("option");
+            createList.textContent = allCities[i].savedCity;
+            dataList.appendChild(createList);
+    
+        }
     }
-    return response.json();
-    // console.log(response.json());
-})
-
-    .then(function (data) {
-    var city90= data[0].lon;
-    var city30= data[0].name;
-    console.log(city30);
-    console.log(city90);
-    var searchedLat = data[0].lat;
-    console.log(searchedLat);
-    
-    getWeather(searchedLat, city90);
-    })
-
-    // getWeather(searchedLat, city90);
 });
+
