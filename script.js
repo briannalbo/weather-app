@@ -190,7 +190,7 @@ $("#searchBtn").on("click", function() {
     console.log(searchedLat);
     
     getWeather(searchedLat, city90);
-    })
+    });
 
     var savedCity = city;
 
@@ -228,5 +228,50 @@ $("#searchBtn").on("click", function() {
     
         }
     }
+    
 });
 
+// function saveHistory() {
+//     var savedCity = city;
+
+//     if (savedCity === null) {
+//         console.log("No city searched");
+//     }
+
+//     else {
+//     var cityArray = {
+//         savedCity: savedCity,
+//     }
+//     }
+//     console.log(cityArray);
+//     var allCities = localStorage.getItem("allCities");
+//     if (allCities === null) {
+//         allCities = [];
+//     }
+//     else {
+//         allCities =JSON.parse(allCities);
+//     }
+//     allCities.push(cityArray);
+//     var newcity = JSON.stringify(allCities);
+//     localStorage.setItem("allCities", newcity);
+    
+//     console.log(newcity);
+//     console.log(cityArray);
+
+//     if (allCities !== null) {
+
+//         for (var i = 0; i < allCities.length; i++) {
+    
+//             var createList = document.createElement("option");
+//             createList.textContent = allCities[i].savedCity;
+//             dataList.appendChild(createList);
+    
+//         }
+//     }
+// };
+
+$("#clear-history").on("click", function() {
+    localStorage.clear();
+    location.reload();
+}
+);

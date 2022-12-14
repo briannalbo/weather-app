@@ -19,11 +19,26 @@ header {
 }
 #citySearch {
     width: 320px;
+    height: 150px;
     padding-top: 20px;
     padding-left: 20px;
+    padding-bottom: 10px;
 }
 #searchBtn {
     width: 300px;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+    border-bottom: 10px solid white;
+    border-top: 5px solid white;
+    
+}
+
+#clear-history {
+    
+    width: 300px;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
 }
 
 #cityBtns {
@@ -36,6 +51,7 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    
 }
 
 #weather-main {
