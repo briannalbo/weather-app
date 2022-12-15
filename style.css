@@ -33,6 +33,11 @@ header {
     
 }
 
+img {
+    width: 30px;
+    height: 30px;
+}
+
 #clear-history {
     
     width: 300px;

@@ -75,6 +75,16 @@ function getWeather(currentLat, currentLong) {
     var descript4 = data.list[23].weather[0].description;
     var descript5 = data.list[31].weather[0].description;
     var descript6 = data.list[39].weather[0].description;
+
+
+    var iconImg = document.createElement("img");
+
+    var iconPath = `./images/${icon}.png`;
+
+    iconImg.src = iconPath;
+
+    $("#icon-image").append(iconImg);
+
     
 $("#city").text(city);
 $("#temp").text(temp + " degrees");
