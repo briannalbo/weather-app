@@ -77,13 +77,19 @@ function getWeather(currentLat, currentLong) {
     var descript6 = data.list[39].weather[0].description;
 
 
+    $("#icon-image").text(icon);
+    
     var iconImg = document.createElement("img");
 
     var iconPath = `./images/${icon}.png`;
 
     iconImg.src = iconPath;
-
+    $("#icon-image").text("");
     $("#icon-image").append(iconImg);
+
+    
+
+    
 
     
 $("#city").text(city);
