@@ -13,7 +13,11 @@
     
 
 <container id="search-tools">
+  
     <div class="form" id="citySearch">
+      <button type="button" class="btn btn-light" id="user-location"> Use My Location
+        
+      </button>
   <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
 
 <input class="form-control input" list="datalistOptions" id="searchedCity" placeholder="Type to search..."></input>
@@ -28,10 +32,11 @@
 
 
 <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
-<button type="button" class="btn btn-light" id="user-location">use my location</button>
 
-  <button type="button" class="btn btn-light" id="clear-history">Clear Search History</button>
+
+  <!-- <button type="button" class="btn btn-light" id="clear-history">Clear Search History</button> -->
 </div>
+
 <h1 class="weather"></h1>
 
 <!-- <div id="weather1">
@@ -40,9 +45,11 @@
     <h3 id="description"></h3>
     <div id="icon"></div>
 </div> -->
-
+<div id="majorBtns">
+  <button type="button" class="btn btn-light" id="clear-history">Clear Search History</button>
 <div class="btn-group-vertical btn-group-lg" id="cityBtns" role="group" aria-label="Vertical button group">
-    <button type="button" class="btn btn-lg btn-light" id="atlanta">Atlanta</button>
+  <!-- <button type="button" class="btn btn-light" id="clear-history">Clear Search History</button>   -->
+  <button type="button" class="btn btn-lg btn-light" id="atlanta">Atlanta</button>
     <button type="button" class="btn btn-light" id="denver">Denver</button>
     <button type="button" class="btn btn-light" id="seattle">Seattle</button>
     <button type="button" class="btn btn-light" id="san-francisco">San Francisco</button>
@@ -51,13 +58,15 @@
     <button type="button" class="btn btn-light" id="chicago">Chicago</button>
     <button type="button" class="btn btn-light" id="austin">Austin</button>
   </div>
+  </div>
   </container>
 
 
 <container id="weather-main">
 
 <div class="weather1 card mb-3">
-    <img src="" class="card-img-top" alt="...">
+    
+    
     <div class="card-body">
         <h2 class="card-date" id="currentDate"></h2>
       <h5 class="card-title" id="city"> </h5>

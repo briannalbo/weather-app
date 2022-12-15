@@ -1,6 +1,9 @@
 const key = "599bfde9dad9e03d506db251b686645c";
 var weather = document.querySelector('.weather');
 var dataList = document.querySelector('datalist');
+var weatherDash = document.querySelector('#weather-main');
+// weatherDash.style.display = 'none';
+
 
 $("#currentDate").text(dayjs().format('MM/DD/YY'));
 $("#tomorrow").text(dayjs().add(1,'day').format('MM/DD/YY'));
@@ -33,6 +36,7 @@ function setPosition(position) {
 });
 
 function getWeather(currentLat, currentLong) {
+    // weatherDash.style.display = 'block';
     let api = `http://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=${key}&units=imperial`;
     console.log(api);
     
