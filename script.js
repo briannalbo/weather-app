@@ -49,8 +49,7 @@ function getWeather(currentLat, currentLong) {
     console.log(temp);
     var description = data.list[0].weather[0].description;
     console.log(description);
-    var icon = data.list[0].weather[0].icon;
-    console.log(icon);
+    
     var humidity = data.list[0].main.humidity;
     console.log(humidity);
     var windSpeed = data.list[0].wind.speed;
@@ -76,16 +75,59 @@ function getWeather(currentLat, currentLong) {
     var descript5 = data.list[31].weather[0].description;
     var descript6 = data.list[39].weather[0].description;
 
+    var icon = data.list[0].weather[0].icon;
+    console.log(icon);
+    var icon2 = data.list[7].weather[0].icon;
+    var icon3 = data.list[15].weather[0].icon;
+    var icon4 = data.list[23].weather[0].icon;
+    var icon5 = data.list[31].weather[0].icon;
+    var icon6 = data.list[39].weather[0].icon;
+    
+
 
     $("#icon-image").text(icon);
+    $("#iconimg2").text(icon2);
+    $("#iconimg3").text(icon3);
+    $("#iconimg4").text(icon4);
+    $("#iconimg5").text(icon5);
+    $("#iconimg6").text(icon6);
     
     var iconImg = document.createElement("img");
+    var iconImg2 = document.createElement("img");
+    var iconImg3 = document.createElement("img");
+    var iconImg4 = document.createElement("img");
+    var iconImg5 = document.createElement("img");
+    var iconImg6 = document.createElement("img");
 
     var iconPath = `./images/${icon}.png`;
+    var iconPath2 = `./images/${icon2}.png`;
+    var iconPath3 = `./images/${icon3}.png`;
+    var iconPath4 = `./images/${icon4}.png`;
+    var iconPath5 = `./images/${icon5}.png`;
+    var iconPath6 = `./images/${icon6}.png`;
 
     iconImg.src = iconPath;
+    iconImg2.src = iconPath2;
+    iconImg3.src = iconPath3;
+    iconImg4.src = iconPath4;
+    iconImg5.src = iconPath5;
+    iconImg6.src = iconPath6;
+
+
     $("#icon-image").text("");
     $("#icon-image").append(iconImg);
+    $("#iconimg2").text("");
+    $("#iconimg2").append(iconImg2);
+    $("#iconimg3").text("");
+    $("#iconimg3").append(iconImg3);
+    $("#iconimg4").text("");
+    $("#iconimg4").append(iconImg4);
+    $("#iconimg5").text("");
+    $("#iconimg5").append(iconImg5);
+    $("#iconimg6").text("");
+    $("#iconimg6").append(iconImg6);
+
+
 
     
 
@@ -93,16 +135,16 @@ function getWeather(currentLat, currentLong) {
 
     
 $("#city").text(city);
-$("#temp").text(temp + " degrees");
+$("#temp").text(temp + " °");
 $("#description").text(description);
 $("#humidity").text("humidity: " + humidity);
 $("#wind").text("wind-speed " + windSpeed);
 
-$("#temp2").text(temp2 + " degrees");
-$("#temp3").text(temp3 + " degrees");
-$("#temp4").text(temp4 + " degrees");
-$("#temp5").text(temp5 + " degrees");
-$("#temp6").text(temp6 + " degrees");
+$("#temp2").text(temp2 + " °");
+$("#temp3").text(temp3 + " °");
+$("#temp4").text(temp4 + " °");
+$("#temp5").text(temp5 + " °");
+$("#temp6").text(temp6 + " °");
 
 $("#humid2").text("humidity: " + humid2);
 $("#humid3").text("humidity: " + humid3);
