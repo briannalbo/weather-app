@@ -9,6 +9,9 @@ $("#threedays").text(dayjs().add(3,'day').format('MM/DD/YY'));
 $("#fourdays").text(dayjs().add(4,'day').format('MM/DD/YY'));
 $("#fivedays").text(dayjs().add(5,'day').format('MM/DD/YY'));
 
+
+$("#user-location").on("click", function() {
+
 if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(setPosition);
 }
@@ -27,6 +30,7 @@ function setPosition(position) {
     getWeather(currentLat, currentLong);
 
 }
+});
 
 function getWeather(currentLat, currentLong) {
     let api = `http://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=${key}&units=imperial`;
