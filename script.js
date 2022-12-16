@@ -178,8 +178,6 @@ $("#descript5").text(descript5);
 $("#descript6").text(descript6);
 
 intro.style.display = 'none';
-
-
 weatherDash.style.display = 'block';
 })
 };
@@ -240,12 +238,15 @@ $("#austin").on("click", function() {
 $("#searchBtn").on("click", function() {
     // var searchedCity = document.querySelector('#searchedCity');
     // $("#searchedCity").text("ch");
+
+    $("#city").text(city);
     var city = $(this).siblings("input").val();
+    $("#city").text(city);
     
  
     console.log(city);
     let apiLoc = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${key}`;
-    // console.log(apiLoc);
+    
     
     fetch(apiLoc)
     .then(function (response) {
@@ -253,12 +254,11 @@ $("#searchBtn").on("click", function() {
         console.log(response.status);
     }
     return response.json();
-    // console.log(response.json());
 })
 
     .then(function (data) {
-    var city90= data[0].lon;
-    var city30= data[0].name;
+    var city90 = data[0].lon;
+    var city30 = data[0].name;
     console.log(city30);
     console.log(city90);
     var searchedLat = data[0].lat;
@@ -309,44 +309,7 @@ $("#searchBtn").on("click", function() {
     
 });
 
-// function saveHistory() {
-//     var savedCity = city;
 
-//     if (savedCity === null) {
-//         console.log("No city searched");
-//     }
-
-//     else {
-//     var cityArray = {
-//         savedCity: savedCity,
-//     }
-//     }
-//     console.log(cityArray);
-//     var allCities = localStorage.getItem("allCities");
-//     if (allCities === null) {
-//         allCities = [];
-//     }
-//     else {
-//         allCities =JSON.parse(allCities);
-//     }
-//     allCities.push(cityArray);
-//     var newcity = JSON.stringify(allCities);
-//     localStorage.setItem("allCities", newcity);
-    
-//     console.log(newcity);
-//     console.log(cityArray);
-
-//     if (allCities !== null) {
-
-//         for (var i = 0; i < allCities.length; i++) {
-    
-//             var createList = document.createElement("option");
-//             createList.textContent = allCities[i].savedCity;
-//             dataList.appendChild(createList);
-    
-//         }
-//     }
-// };
 
 $("#clear-history").on("click", function() {
     localStorage.clear();

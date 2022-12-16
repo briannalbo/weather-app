@@ -3,43 +3,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--adds title describing page-->
     <title>Weather App</title>
+    <!--links bootstrap styling-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--links the css style sheet-->
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <!--header of page-->
     <header>Weather Dashboard</header>
     
-    
-
+  <!--this container encompasses search tools for the user; searchbar, use current location, clear search history-->
 <container id="search-tools">
   
     <div class="form" id="citySearch">
+      <!--button for user to choose to view weather at their current location-->
       <button type="button" class="btn btn-light" id="user-location"> Use My Location
-        
-      </button>
+        </button>
   
-
+<!--search bar for user to search specific cities-->
 <input class="form-control input" list="datalistOptions" id="searchedCity" placeholder="Type to search..."></input>
-<datalist id="datalistOptions">
-  
-</datalist>
-
-
-
+<!--data list; options in this list are made through js file-->
+<!--when user searches a city, it is saved to local storage and displayed as an option in this datalist-->
+<datalist id="datalistOptions"></datalist>
+<!--search button; user clicks this after entering-->
 <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
-
-
  
 </div>
 
 <h1 class="weather"></h1>
-
-
+<!--this is a group of buttons for major cities that the user click for easy access to popular cities-->
 <div id="majorBtns">
   <button type="button" class="btn btn-light" id="clear-history">Clear Search History</button>
 <div class="btn-group-vertical btn-group-lg" id="cityBtns" role="group" aria-label="Vertical button group">
-  <!-- <button type="button" class="btn btn-light" id="clear-history">Clear Search History</button>   -->
   <button type="button" class="btn btn-lg btn-light" id="atlanta">Atlanta</button>
     <button type="button" class="btn btn-light" id="denver">Denver</button>
     <button type="button" class="btn btn-light" id="seattle">Seattle</button>
@@ -53,59 +50,47 @@
   </container>
 
 
-
+<!--this area displays the area where the weather forecast is generated-->
 <container id="weather-main">
 
+  <!--the intro serves as a placeholder before the user has chosen a city-->
   <section id="intro">
-    <div class="weather1 card mb-3">
-    
-    
+    <div class="weather1 card mb-3">    
       <div class="card-body">
         <h2> Welcome to the Weather Dashboard</h2>
         <h5>Search, click a major city, or choose to use your current location to get a 5-day forecast. </h5>
-          <!-- <h2 class="card-date" id="currentDate"></h2>
-        <h5 class="card-title" id="city"> </h5>
-        <p class="card-text" id="icon-image"></p>
-        
-        <p class="card-text" id="temp"> </p>
-        <p class="card-text" id="description"></p>
-        <p class="card-text" id="humidity"></p>
-        <p class="card-text" id="wind"></p><small class="text-muted"> </small></p> -->
       </div>
     </div>
   </section>
 
+<!--displays all of the cards when user chooses a city-->
 <section id="display-weather">
+
+<!--first and largest card that displays current date weather-->
 <div class="weather1 card mb-3">
-    
-    
     <div class="card-body" id="first-card">
         <h2 class="card-date" id="currentDate"></h2>
       <h5 class="card-title" id="city"> </h5>
       <p class="card-text" id="icon-image"></p>
-      
       <p class="card-text" id="temp"> </p>
       <p class="card-text" id="description"></p>
       <p class="card-text" id="humidity"></p>
       <p class="card-text" id="wind"></p><small class="text-muted"> </small></p>
     </div>
   </div>
-
-
+<!--tomorrows weather, temp, icon, description, wind, & humidity-->
 <div class="card-group">
     <div class="card">
-
       <div class="card-body">
         <h5 class="card-date" id="tomorrow">Card title</h5>
-        
         <p class="card-text" id="temp2"></p>
         <p class="card-text" id="iconimg2"></p>
         <p class="card-text"><small class="text-muted" id="descript2"></small></p>
         <p class="card-text" id="humid2"></p>
         <p class="card-text" id="wind2"></p>
-        
       </div>
     </div>
+<!--two days from now weather, temp, icon, description, wind, & humidity-->
     <div class="card">
       <div class="card-body">
         <h5 class="card-date" id="twodays">Card title</h5>
@@ -114,9 +99,9 @@
         <p class="card-text"><small class="text-muted" id="descript3"></small></p>
         <p class="card-text" id="humid3"></p>
         <p class="card-text" id="wind3"></p>
-        
       </div>
     </div>
+    <!--three days from now weather, temp, icon, description, wind, & humidity-->
     <div class="card">
       <div class="card-body">
         <h5 class="card-date" id="threedays">Card title</h5>
@@ -125,35 +110,32 @@
         <p class="card-text"><small class="text-muted" id="descript4"></small></p>
         <p class="card-text" id="humid4"></p>
         <p class="card-text" id="wind4"></p>
-        
       </div>
     </div>
-
+<!--4 days from now weather, temp, icon, description, wind, & humidity-->
         <div class="card">
-          
           <div class="card-body">
-            <h5 class="card-date" id="fourdays">Card title</h5>
+            <h5 class="card-date" id="fourdays"></h5>
             <p class="card-text" id="temp5"></p>
             <p class="card-text" id="iconimg5"></p>
             <p class="card-text"><small class="text-muted" id="descript5"></small></p>
             <p class="card-text" id="humid5"></p>
-            <p class="card-text" id="wind5"></p>
-            
+            <p class="card-text" id="wind5"></p>  
           </div>
         </div>
-        <div class="card">
-          
+<!--five days from now weather, temp, icon, description, wind, & humidity-->
+        <div class="card"> 
           <div class="card-body">
-            <h5 class="card-date" id="fivedays">Card title</h5>
+            <h5 class="card-date" id="fivedays"></h5>
             <p class="card-text" id="temp6"></p>
             <p class="card-text" id="iconimg6"></p>
             <p class="card-text"><small class="text-muted" id="descript6"></small></p>
             <p class="card-text" id="humid6"></p>
             <p class="card-text" id="wind6"></p>
-            
           </div>
         </div>
-</div></section>
+</div>
+  </section>
     </container>
     
      <!--links dayjs-->     
