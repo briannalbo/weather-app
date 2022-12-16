@@ -126,3 +126,13 @@ img {
     text-align: left;
     font-size: 18px;
 }
+
+@media only screen and (max-width:390px) {
+    #search-tools{
+        flex-wrap: wrap;
+    }
+
+    #display-weather {
+        flex-wrap: wrap;
+    }
+}
