@@ -1,8 +1,5 @@
 # Weather-App
 
-## Task
-Build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
-
 ## User Story
 
 ```md
@@ -18,29 +15,39 @@ GIVEN a weather dashboard with form inputs
 WHEN I search for a city
 THEN I am presented with current and future conditions for that city and that city is added to the search history
 WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
+THEN I am presented with the city name, the date, an icon representation of weather conditions,the temperature,
+the humidity, and the the wind speed
 WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions,
+the temperature, the wind speed, and the humidity
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 ```
 ## Work Done
-```md
-I styled the page using html, css, and bootstrap.
-I used dayjs to add the corresponding dates of the weather forecast.
-I used the open weather api to pull data pertaining to 5 day weather forecast.
-I used the open weather geo location api to allow the user to search weather for specific cities.
-I added easy access to weather of major cities by creating a group of buttons corresponding to 
+The page was styled using html, css, bootstrap, and javascript.
+Dayjs was used to add the corresponding dates of the weather forecast.
+The open weather api was used to pull data pertaining to 5 day weather forecast.
+The open weather geo location api was used to allow the user to search weather for specific cities.
+Easy acces to the weather of major cities is provided through a group of buttons corresponding to 
 those popular cities; their weather can be accessed by clicking on each.
-I added user search history by saving each search to local storage then displaying them as options 
+User search history was added by saving each search to local storage then displaying them as options 
 under the search bar.
-I added a clear history button to give users the option to clear their search history.
-I added an intro banner make the page look cleaner when no weather has been search yet.
+A clear history button was added to give users the option to clear their search history.
+An intro banner is displayed upon opening the page to give it a cleaner look when no weather has been search yet.
+
+## Future Developments
+
+I plan to incorporate a drop down menu to add states to the search criteria in order to avoid
+cities with popular names preventing the user from accessing the information they are looking for.
+I also plan to enhance the localstorage component to make it more polished.
 
 
-```
 ## Deployed Webpage
 https://briannalbo.github.io/weather-app/
 
-![screenshot.png](https://github.com/briannalbo/weather-app/blob/main/screenshot.png)
+![screenshot.png](https://github.com/briannalbo/weather-app/blob/main/images/screenshot.png)
+
+## Sources
+API url and documentation can be found here: https://openweathermap.org/forecast5#call
+
 
