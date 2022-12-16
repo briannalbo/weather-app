@@ -1,7 +1,9 @@
+/* adds sizing to body */
 body{
     box-sizing: 100vh;
 }
 
+/* assigns color, font & its size and alignment,  */
 header {
     background-color: navy;
     font-size: 50px;
@@ -12,6 +14,7 @@ header {
     text-align: center;
 }
 
+/* adds styling to weather section of page */
 #weather1 {
     flex-direction: column;
     float: right;
@@ -19,6 +22,8 @@ header {
     height: 300px;
     border: 1px solid gray;
 }
+
+/* adds sizing parameters to search section of page */
 #citySearch {
     width: 320px;
     height: 150px;
@@ -26,6 +31,8 @@ header {
     padding-left: 20px;
     padding-bottom: 10px;
 }
+
+/* adds sizing parameters to the search button */
 #searchBtn {
     width: 300px;
     border-left: 4px solid white;
@@ -35,6 +42,7 @@ header {
     
 }
 
+/* adds sizing parameters to the user location button */
 #user-location {
     width: 300px;
     border-top: 2px solid white;
@@ -44,41 +52,40 @@ header {
     
 }
 
-#icon-image {
-    color: transparent;
-}
 
+/* sets the size of all weather icons */
 img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
+/* sets sizing and alignments in clear history button */
 #clear-history {
-    
     width: 300px;
     height: 30px;
     font-size: 14px;
     text-align: center;
     display: flex;
-    /* border-left: 20px solid white; */
     padding-left: 20px;
-    /* border-bottom: 10px solid white; */
     margin-bottom: 10px;
     margin-left: 20px;
     text-align: center;
     justify-content: center;
 }
 
+/* styling major city buttons groups borders */
 .btn-group {
     border-top: 50px solid white;
     padding-top: 50px;
 }
 
+/* adds sizing to major city buttons */
 #cityBtns {
     width: 300px;
     padding-left: 20px;
 }
 
+/* positions all of the search tools to the left of the page and addresses their alignment */
 #search-tools{
     float: left;
     flex-direction: column;
@@ -87,6 +94,7 @@ img {
     
 }
 
+/* sets sizing for the main weather display */
 #weather-main {
     padding-top: 20px;
     float: right;
@@ -96,21 +104,24 @@ img {
     flex-direction:column;
 }
 
+/* sets all cards bg color and font color */
 .card {
     background-color: navy;
     color: whitesmoke;
 }
 
+/* aligns the intro sections to have font centered */
 #intro {
     text-align: center;
-
 }
 
+/* hides the weather generator from page when first loaded in order to display the intro as the placeholder */
 #display-weather {
     display: none;
     text-align: center;
 }
 
+/* positions text in first weather card to the left; all other cards text are centered */
 #first-card {
     text-align: left;
     font-size: 18px;
