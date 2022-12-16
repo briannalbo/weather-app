@@ -1,6 +1,7 @@
 /* adds sizing to body */
 body{
     box-sizing: 100vh;
+    display: inline-block;
 }
 
 /* assigns color, font & its size and alignment,  */
@@ -102,6 +103,7 @@ img {
     height: 630px;
     padding-right: 70px;
     flex-direction:column;
+    margin-left: 20px;
 }
 
 /* sets all cards bg color and font color */
@@ -119,6 +121,8 @@ img {
 #display-weather {
     display: none;
     text-align: center;
+    width: 950px;
+    margin-left: 20px;
 }
 
 /* positions text in first weather card to the left; all other cards text are centered */
