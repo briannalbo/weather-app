@@ -288,7 +288,7 @@ $("#searchBtn").on("click", function() {
 
     //this is where local storage is created
     var savedCity = city;
-    var dataList = document.getElementById('#dataList');
+    var dataList = document.querySelector('#dataList');
     if (savedCity === null) {
         console.log("No city searched");
     }
@@ -320,7 +320,7 @@ $("#searchBtn").on("click", function() {
     //each search the user makes creates options in a dropdown in the search bar
             var createList = document.createElement("option");
             createList.textContent = allCities[i].savedCity;
-            dataList.appendChild(createList);
+            $("dataList").append(createList);
     
         }
     }
