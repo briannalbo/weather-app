@@ -38,7 +38,7 @@ function setPosition(position) {
 });
 
 function getWeather(currentLat, currentLong) {
-    weatherDash.style.display = 'block';
+    // weatherDash.style.display = 'block';
     intro.style.display = 'none';
     
     let api = `http://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=${key}&units=imperial`;
@@ -177,8 +177,12 @@ $("#descript4").text(descript4);
 $("#descript5").text(descript5);
 $("#descript6").text(descript6);
 
+intro.style.display = 'none';
 
-})};
+
+weatherDash.style.display = 'block';
+})
+};
 
 var atlantalat = 33.753746;
 var atlantalong = -84.386330;

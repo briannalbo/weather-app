@@ -110,3 +110,8 @@ img {
     display: none;
     text-align: center;
 }
+
+#first-card {
+    text-align: left;
+    font-size: 18px;
+}

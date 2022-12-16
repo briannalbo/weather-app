@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>Weather Forecast</header>
+    <header>Weather Dashboard</header>
     
     
 
@@ -18,15 +18,11 @@
       <button type="button" class="btn btn-light" id="user-location"> Use My Location
         
       </button>
-  <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
+  
 
 <input class="form-control input" list="datalistOptions" id="searchedCity" placeholder="Type to search..."></input>
 <datalist id="datalistOptions">
-  <!-- <option value=" ">
-  <option value=" ">
-  <option value=" ">
-  <option value=" ">
-  <option value=" "> -->
+  
 </datalist>
 
 
@@ -34,17 +30,12 @@
 <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
 
 
-  <!-- <button type="button" class="btn btn-light" id="clear-history">Clear Search History</button> -->
+ 
 </div>
 
 <h1 class="weather"></h1>
 
-<!-- <div id="weather1">
-    <h2 id="city"></h2>
-    <h3 id="temp"></h3> 
-    <h3 id="description"></h3>
-    <div id="icon"></div>
-</div> -->
+
 <div id="majorBtns">
   <button type="button" class="btn btn-light" id="clear-history">Clear Search History</button>
 <div class="btn-group-vertical btn-group-lg" id="cityBtns" role="group" aria-label="Vertical button group">
@@ -88,7 +79,7 @@
 <div class="weather1 card mb-3">
     
     
-    <div class="card-body">
+    <div class="card-body" id="first-card">
         <h2 class="card-date" id="currentDate"></h2>
       <h5 class="card-title" id="city"> </h5>
       <p class="card-text" id="icon-image"></p>
@@ -109,9 +100,10 @@
         
         <p class="card-text" id="temp2"></p>
         <p class="card-text" id="iconimg2"></p>
+        <p class="card-text"><small class="text-muted" id="descript2"></small></p>
         <p class="card-text" id="humid2"></p>
         <p class="card-text" id="wind2"></p>
-        <p class="card-text" id="descript2"></p>
+        
       </div>
     </div>
     <div class="card">
@@ -119,9 +111,10 @@
         <h5 class="card-date" id="twodays">Card title</h5>
         <p class="card-text" id="temp3"></p>
         <p class="card-text" id="iconimg3"></p>
+        <p class="card-text"><small class="text-muted" id="descript3"></small></p>
         <p class="card-text" id="humid3"></p>
         <p class="card-text" id="wind3"></p>
-        <p class="card-text" id="descript3"></p>
+        
       </div>
     </div>
     <div class="card">
@@ -129,9 +122,10 @@
         <h5 class="card-date" id="threedays">Card title</h5>
         <p class="card-text" id="temp4"></p>
         <p class="card-text" id="iconimg4"></p>
+        <p class="card-text"><small class="text-muted" id="descript4"></small></p>
         <p class="card-text" id="humid4"></p>
         <p class="card-text" id="wind4"></p>
-        <p class="card-text" id="descript4"><small class="text-muted">Last updated 3 mins ago</small></p>
+        
       </div>
     </div>
 
@@ -141,9 +135,10 @@
             <h5 class="card-date" id="fourdays">Card title</h5>
             <p class="card-text" id="temp5"></p>
             <p class="card-text" id="iconimg5"></p>
+            <p class="card-text"><small class="text-muted" id="descript5"></small></p>
             <p class="card-text" id="humid5"></p>
             <p class="card-text" id="wind5"></p>
-            <p class="card-text" id="descript5"><small class="text-muted">maybe put descriptions here</small></p>
+            
           </div>
         </div>
         <div class="card">
@@ -152,9 +147,10 @@
             <h5 class="card-date" id="fivedays">Card title</h5>
             <p class="card-text" id="temp6"></p>
             <p class="card-text" id="iconimg6"></p>
+            <p class="card-text"><small class="text-muted" id="descript6"></small></p>
             <p class="card-text" id="humid6"></p>
             <p class="card-text" id="wind6"></p>
-            <p class="card-text" id="descript6"><small class="text-muted">Last updated 3 mins ago</small></p>
+            
           </div>
         </div>
 </div></section>
