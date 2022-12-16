@@ -1,8 +1,10 @@
 const key = "599bfde9dad9e03d506db251b686645c";
 var weather = document.querySelector('.weather');
 var dataList = document.querySelector('datalist');
-var weatherDash = document.querySelector('#weather-main');
+var weatherDash = document.querySelector('#display-weather');
 // weatherDash.style.display = 'none';
+var intro = document.querySelector('#intro');
+
 
 
 $("#currentDate").text(dayjs().format('MM/DD/YY'));
@@ -36,7 +38,9 @@ function setPosition(position) {
 });
 
 function getWeather(currentLat, currentLong) {
-    // weatherDash.style.display = 'block';
+    weatherDash.style.display = 'block';
+    intro.style.display = 'none';
+    
     let api = `http://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=${key}&units=imperial`;
     console.log(api);
     
@@ -51,6 +55,7 @@ function getWeather(currentLat, currentLong) {
 
     .then(function (data) {
     var city = data.city.name;
+    
 
     console.log(city);
     var temp = Math.floor(data.list[0].main.temp);
@@ -145,8 +150,8 @@ function getWeather(currentLat, currentLong) {
 $("#city").text(city);
 $("#temp").text(temp + " °");
 $("#description").text(description);
-$("#humidity").text("humidity: " + humidity);
-$("#wind").text("wind-speed " + windSpeed);
+$("#humidity").text("Humidity: " + humidity + " %");
+$("#wind").text("Wind: " + windSpeed + " mph");
 
 $("#temp2").text(temp2 + " °");
 $("#temp3").text(temp3 + " °");
@@ -154,17 +159,17 @@ $("#temp4").text(temp4 + " °");
 $("#temp5").text(temp5 + " °");
 $("#temp6").text(temp6 + " °");
 
-$("#humid2").text("humidity: " + humid2);
-$("#humid3").text("humidity: " + humid3);
-$("#humid4").text("humidity: " + humid4);
-$("#humid5").text("humidity: " + humid5);
-$("#humid6").text("humidity: " + humid6);
+$("#humid2").text("Humidity: " + humid2 + " %");
+$("#humid3").text("Humidity: " + humid3 + " %");
+$("#humid4").text("Humidity: " + humid4 + " %");
+$("#humid5").text("Humidity: " + humid5 + " %");
+$("#humid6").text("Humidity: " + humid6 + " %");
 
-$("#wind2").text("wind-speed " + wind2);
-$("#wind3").text("wind-speed " + wind3);
-$("#wind4").text("wind-speed " + wind4);
-$("#wind5").text("wind-speed " + wind5);
-$("#wind6").text("wind-speed " + wind6);
+$("#wind2").text("Wind: " + wind2 + " mph");
+$("#wind3").text("Wind: " + wind3 + " mph");
+$("#wind4").text("Wind: " + wind4 + " mph");
+$("#wind5").text("Wind: " + wind5 + " mph");
+$("#wind6").text("Wind: " + wind6 + " mph");
 
 $("#descript2").text(descript2);
 $("#descript3").text(descript3);
@@ -254,6 +259,9 @@ $("#searchBtn").on("click", function() {
     console.log(city90);
     var searchedLat = data[0].lat;
     console.log(searchedLat);
+    var state = data[0].state;
+    console.log(state);
+    $("#city").text(city);
     
     getWeather(searchedLat, city90);
     });
