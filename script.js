@@ -35,7 +35,7 @@ function setPosition(position) {
 function getWeather(currentLat, currentLong) {
 
 //this is the weather api where all of the forecasts information is pulled
-    let api = `http://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=${key}&units=imperial`;
+    let api = `https://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=${key}&units=imperial`;
 //this is where we fetch info from the api    
     fetch(api)
 //first we check to make sure the request is successful
