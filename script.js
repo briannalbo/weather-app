@@ -288,6 +288,7 @@ $("#searchBtn").on("click", function() {
 
     //this is where local storage is created
     var savedCity = city;
+    var dataList = document.getElementById('#dataList');
     if (savedCity === null) {
         console.log("No city searched");
     }
